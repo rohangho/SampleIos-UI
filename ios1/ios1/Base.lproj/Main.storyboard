@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,14 +12,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ios1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="x5L-QP-TEb">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="center" axis="vertical" distribution="equalCentering" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="VnS-LF-9CZ" userLabel="CardButtonStack">
-                                <rect key="frame" x="40.5" y="144.5" width="239" height="231"/>
+                                <rect key="frame" x="87.5" y="352.5" width="239" height="231"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hzz-Nv-KhV" userLabel="CardStack">
                                         <rect key="frame" x="0.0" y="0.0" width="239" height="170"/>
@@ -38,12 +38,15 @@
                                         <rect key="frame" x="78.5" y="200" width="82" height="31"/>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.84999999999999998" height="1"/>
                                         <state key="normal" backgroundImage="dealbutton"/>
+                                        <connections>
+                                            <action selector="dealTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zpa-ol-udC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <variation key="heightClass=compact-widthClass=compact" spacing="10"/>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="m6g-kF-E6K">
-                                <rect key="frame" x="99" y="40" width="122" height="67"/>
+                                <rect key="frame" x="146" y="40" width="122" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dDx-oA-Ci1"/>
                                 </constraints>
@@ -59,7 +62,7 @@
                                 </variation>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="O7N-EV-JfH">
-                                <rect key="frame" x="20" y="409" width="63.5" height="51"/>
+                                <rect key="frame" x="20" y="791" width="63.5" height="51"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDS-cg-ADt">
                                         <rect key="frame" x="0.0" y="0.0" width="63.5" height="20.5"/>
@@ -104,6 +107,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="leftCarImg" destination="e9k-Cl-O1q" id="qfO-Eo-nna"/>
+                        <outlet property="leftScoreNum" destination="Bh4-K1-QCx" id="wom-4l-FY2"/>
+                        <outlet property="rightCardImg" destination="MEX-Nm-h8x" id="iHx-Pm-Ph0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

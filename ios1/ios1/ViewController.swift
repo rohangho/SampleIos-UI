@@ -10,11 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var leftCarImg: UIImageView!
+    
+    @IBOutlet weak var rightCardImg: UIImageView!
+    
+    
+    @IBOutlet weak var leftScoreNum:
+    UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
+        
     }
 
+    @IBAction func dealTapped(_ sender: Any) {
+        
+        print("Deal Tappdd")
+        leftCarImg.image=UIImage(named: "card2")
+        
+    }
+    
 
 }
 
